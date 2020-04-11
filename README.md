@@ -1,4 +1,4 @@
-# Esquio (V2) Github Action set toggle parameter value for feature
+# Esquio (V3) Github Action set toggle parameter value for feature
 
 With this Esquio Github action you can set a parameter value for a toggle in a feature in an Github Actions workflow.[Esquio](https://esquio.readthedocs.io/en/latest/).
 
@@ -18,7 +18,7 @@ Please read [Esquio readthedocs](https://esquio.readthedocs.io/en/latest/) first
 
 ```YAML
       - name: Esquio rollout
-        uses: actions/esquio-rollout
+        uses: actions/esquio-rollout-v3
         id: esquio-rollout
         with:
           esquioUrl: 'https://esquiodemoui.azurewebsites.net/'
