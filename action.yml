@@ -5,19 +5,26 @@ branding:
   icon: 'toggle-right'  
   color: 'blue'
 inputs:
-  esquioUrl:             
+  esquio-url:             
+    required: true
     description: 'Esquio URL'
-  esquioApiKey:
+  esquio-api-key:
+    required: true
     description: 'Esquio API KEy (keep it secret)'
-  productName:
+  product-name:
+    required: true
     description: 'Product name'
-  featureName:
+  feature-name:
+    required: true
     description: 'Feature name'
-  toggleType:
+  toggle-type:
+    required: true
     description: 'Toggle type in the feature'
-  parameterName:
+  parameter-name:
+    required: true
     description: 'Parameter name to set the value'
   value:
+    required: true
     description: 'Value for the parameter'
 runs:
   using: 'node12'

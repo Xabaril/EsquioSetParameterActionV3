@@ -1,6 +1,6 @@
 {
   "name": "esquio-set-parameter-v3",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
   "description": "Xabaril Esquio set toggle parameter action (V3)",
   "main": "lib/main.js",

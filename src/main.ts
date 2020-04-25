@@ -4,12 +4,12 @@ const https = require('https');
 
 async function run() {
   try {
-    const esquioUrl = core.getInput('esquioUrl');
-    const esquioApiKey = core.getInput('esquioApiKey');
-    const productName = core.getInput('productName');
-    const featureName = core.getInput('featureName');
-    const toggleType = core.getInput('toggleType');
-    const parameterName = core.getInput('parameterName');
+    const esquioUrl = core.getInput('esquio-url');
+    const esquioApiKey = core.getInput('esquio-api-key');
+    const productName = core.getInput('product-name');
+    const featureName = core.getInput('feature-name');
+    const toggleType = core.getInput('toggle-type');
+    const parameterName = core.getInput('parameter-name');
     const parameterValue = core.getInput('value');
 
     await setToggleParameter(url.parse(esquioUrl), esquioApiKey, productName, featureName, toggleType, parameterName, parameterValue);

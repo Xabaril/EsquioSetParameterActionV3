@@ -6,12 +6,12 @@ Please read [Esquio readthedocs](https://esquio.readthedocs.io/en/latest/) first
 
 ## Parameters needed
 
-- **esquioUrl**: Url to the ESquio Api. i.e.: https://myesquioui.deployment.com
-- **esquioApiKey**: API key to authenticate to esquio. Recommended to store as [Github secret](https://help.github.com/en/github/automating-your-workflow-with-github-actions/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables)
-- **productName**: Name of the product to which the feature belongs.
-- **featureName**: Name of the feature to chich the toggle belongs.
-- **toggleType**: Type of the toggle to set the parameter value.
-- **parameterName**: Name of the parameter inside the toggle.
+- **esquio-url**: Url to the ESquio Api. i.e.: https://myesquioui.deployment.com
+- **esquio-api-key**: API key to authenticate to esquio. Recommended to store as [Github secret](https://help.github.com/en/github/automating-your-workflow-with-github-actions/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables)
+- **product-name**: Name of the product to which the feature belongs.
+- **feature-name**: Name of the feature to chich the toggle belongs.
+- **toggle-type**: Type of the toggle to set the parameter value.
+- **parameter-name**: Name of the parameter inside the toggle.
 - **value**: Value to set to the parameter.
 
 ## Example
@@ -21,11 +21,11 @@ Please read [Esquio readthedocs](https://esquio.readthedocs.io/en/latest/) first
         uses: actions/esquio-rollout-v3
         id: esquio-rollout
         with:
-          esquioUrl: 'https://esquiodemoui.azurewebsites.net/'
-          esquioApiKey: ${{ secrets.apikey }}
-          productName: 'Default'
-          featureName: 'MatchScore'
-          toggleType: 'Esquio.Toggles.GradualRolloutUserNameToggle,Esquio'
-          parameterName: 'Percentage'
+          esquio-url: 'https://esquiodemoui.azurewebsites.net/'
+          esquio-api-key: ${{ secrets.apikey }}
+          product-name: 'Default'
+          feature-name: 'MatchScore'
+          toggle-type: 'Esquio.Toggles.GradualRolloutUserNameToggle,Esquio'
+          parameter-name: 'Percentage'
           value: '56'
 ```
