@@ -11,9 +11,9 @@ async function run() {
     const toggleType = core.getInput('toggle-type');
     const parameterName = core.getInput('parameter-name');
     const parameterValue = core.getInput('value');
-    const ringName = core.getInput('ring-name');
+    const deploymentName = core.getInput('deployment-name');
 
-    await setToggleParameter(url.parse(esquioUrl), esquioApiKey, productName, featureName, toggleType, parameterName, parameterValue, ringName);
+    await setToggleParameter(url.parse(esquioUrl), esquioApiKey, productName, featureName, toggleType, parameterName, parameterValue, deploymentName);
   } catch (error) {
     core.setFailed(error.message);
   }
@@ -26,7 +26,7 @@ async function setToggleParameter(esquioUrl: url.UrlWithStringQuery,
   toggleType: string,
   parameterName: string,
   parameterValue: string,
-  ringName: string | undefined) {
+  deploymentName: string | undefined) {
 
   const options = {
     hostname: esquioUrl.host,
@@ -45,7 +45,7 @@ async function setToggleParameter(esquioUrl: url.UrlWithStringQuery,
     "ToggleType": toggleType,
     "Name": parameterName,
     "Value": parameterValue,
-    "RingName": ringName
+    "DeploymentName": deploymentName
   });
 
   const req = https.request(options, (res: any) => {

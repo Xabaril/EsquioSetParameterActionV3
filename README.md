@@ -13,6 +13,7 @@ Please read [Esquio readthedocs](https://esquio.readthedocs.io/en/latest/) first
 - **toggle-type**: Type of the toggle to set the parameter value.
 - **parameter-name**: Name of the parameter inside the toggle.
 - **value**: Value to set to the parameter.
+- **deployment-name**: Name of the deplyment you want to set the value for (if you are using rings, otherwise leave empty)
 
 ## Example
 
@@ -28,4 +29,5 @@ Please read [Esquio readthedocs](https://esquio.readthedocs.io/en/latest/) first
           toggle-type: 'Esquio.Toggles.GradualRolloutUserNameToggle,Esquio'
           parameter-name: 'Percentage'
           value: '56'
+          deployment-name: 'Tests'
 ```

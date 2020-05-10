@@ -26,9 +26,9 @@ inputs:
   value:
     required: true
     description: 'Value for the parameter'
-  ring-name:
+  deployment-name:
     required: false
-    description: 'Name of the ring (if you are using rings, otherwise leave empty)'
+    description: 'Name of the deplyment you want to set the value for (if you are using rings, otherwise leave empty)'
 runs:
   using: 'node12'
   main: 'lib/main.js'
